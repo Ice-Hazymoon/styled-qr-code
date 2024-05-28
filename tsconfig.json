@@ -1,22 +1,21 @@
 {
-    "compilerOptions": {
-        "outDir": "./lib/",
-        "sourceMap": true,
-        "module": "es6",
-        "target": "ES2017",
-        "allowJs": true,
-        "moduleResolution": "node",
-        "declaration": true,
-        "allowSyntheticDefaultImports": true,
-        "strict": true,
-        "noImplicitAny": true,
-        "noImplicitThis": true,
-        "alwaysStrict": true,
-        "strictNullChecks": true,
-        "forceConsistentCasingInFileNames": true,
-        "noImplicitReturns": true,
-        "noUnusedLocals": true,
-        "esModuleInterop": true
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
     },
-    "include": ["./src/**/*"]
+    "declaration": true, // 添加这一行
+    "declarationDir": "./types", // 添加这一行
+    "emitDeclarationOnly": true // 添加这一行
+  },
+  "include": ["src"]
 }
